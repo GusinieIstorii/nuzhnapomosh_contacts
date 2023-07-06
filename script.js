@@ -50,7 +50,7 @@ function wireUpTriggers() {
 
 // modal - form open
 
-var modal = document.querySelector(".modal");
+var modal = document.querySelector(".modal-form");
 var trigger = document.querySelector(".contact_button");
 var closeButton = document.querySelector(".close-button");
 
@@ -81,5 +81,22 @@ email.addEventListener("input", (e) => {
 
 // modal - form submitted
 
+const elementForm = document.querySelector('#contact_form');
+const modalSubmitted = document.querySelector('.modal-submitted');
 
+elementForm.addEventListener('submit', (e) => {
+  e.preventDefault(); // Остановить форму от посылки на сервер
+  //------------------------------------------------------------
+  // наверное полученные данные как-то должны все таки отправиться
+  modal.classList.toggle("show-modal");
+  modalSubmitted.classList.toggle("show-modal");
+
+  console.log('happened');
+});
+
+const closeButtonSubmittedModal = document.querySelector('.close-button.submitted')
+
+closeButtonSubmittedModal.addEventListener('click', (e) => {
+    modalSubmitted.classList.toggle("show-modal");
+})
 
