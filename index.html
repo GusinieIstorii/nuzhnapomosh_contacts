@@ -6,36 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нужна помощь</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
 </head>
 <body>
     <main>
-    <div id="description">
+    <div class="description">
         <h1 class="header_1">Контакты</h1>
-        <t>Фонд «Нужна помощь» — это команда единомышленников, объединенная общими ценностями. Мы верим в системные решения социальных проблем и знаем, как на это влияют качество и результаты нашей работы.</t>
-        <button id="button" class="button">НАПИШИТЕ НАМ</button>
+        <p class="p_headline">Фонд «Нужна помощь» — это команда единомышленников, объединенная общими ценностями. Мы верим в системные решения социальных проблем и знаем, как на это влияют качество и результаты нашей работы.</p>
+        <button class="contact_button button">НАПИШИТЕ НАМ</button>
+        <div class="modal modal-form">
+            <div class="modal-content">
+                <div class="modal_content_header">
+                 <span class="close-button">×</span>
+                 <h3>Написать в фонд</h3>
+                </div>
+                <form id="contact_form">
+                    <fieldset id="name_fieldset">
+                        <legend>Имя *</legend>
+                        <label id="name-label" for="name"><input id="name" type="text" required oninvalid="this.setCustomValidity('Укажите имя')"
+                            oninput="setCustomValidity('')"></label>
+                    </fieldset>
+                    <fieldset id="email_fieldset">
+                        <legend>Email *</legend>
+                        <label id="email-label" for="email"><input id="email" type="email" required oninvalid="this.setCustomValidity('Укажите корректный email')"
+                            oninput="setCustomValidity('')"></label>
+                    </fieldset>
+                    <fieldset id="question_fieldset">
+                        <legend>Ваш вопрос *</legend>
+                        <label id="question-label" for="question"><textarea id="question" rows="3" required oninvalid="this.setCustomValidity('Укажите ваш вопрос')"
+                            oninput="setCustomValidity('')"></textarea></label>
+                    </fieldset>
+                    <fieldset id="personal_info_fieldset">
+                        <label for="personal_data"><input id="personal_data" type="checkbox" name="personal_data" value="personal_data" checked class="inline">Соглашаюсь на обработку персональных данных</label>
+                    </fieldset>
+                    <button class="send-buton button" type="submit">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div> <!--
+        <div class="modal modal-submitted">
+            <div class="modal-content">
+                <div class="modal_content_header">
+                 <span class="close-button">×</span>
+                 <h3>Напишите нам</h3>
+                </div>
+                <div class="modal-submitted-content">
+                    <h3>Сообщение отправлено</h3>
+                    <p>Мы свяжемся с вами в течение трех дней</p>
+                </div>
+            </div>
+        </div> -->
         <!-- сделать логику кнопки -->
     </div>
-    <dl class="general contacts">
-        <dt class="contact_head">Адрес БФ «Нужна помощь»</dt>
-        <dd class="contact_desc">г. Москва, ул. Правды, д. 8, корп. 13, 7 этаж, помещение ХХIV, ком. 2</dd>
-        <dt class="contact_head">Адрес для корреспонденции</dt>
-        <dd class="contact_desc">125009, г. Москва, а/я 366 БФ «Нужна помощь»</dd>
-        <dt class="contact_head">Телефон</dt>
-        <dd class="contact_desc">+7 495 641 02 86</dd>
-        <dt class="contact_head">Мессенджеры</dt>
-        <dd class="contact_desc">
-            <a href="https://telegram.me/nzhnpmsh" target="_blank">Telegram</a> / 
-            <a href="https://invite.viber.com/?g2=AQALtEtvvcnJ5lESBi4Ay7uPtf7J1f2ODEkQLiy76uomVq5Ml4jwuTUb9smHEKjg&lang=ru" target="_blank">Viber</a>
-        </dd>
-        <dt class="contact_head">Служба поддержки</dt>
-        <dd class="contact_desc"><a href="mailto:mne@nuzhnapomosh.ru">mne@nuzhnapomosh.ru</a></dd>
-        <dt class="contact_head">По вопросам верификации фондов</dt>
-        <dd class="contact_desc"><a href="mailto:nko@nuzhnapomosh.ru">nko@nuzhnapomosh.ru</a></dd>
-        <dt class="contact_head">По вопросам привлечения средств</dt>
-        <dd class="contact_desc"><a href="mailto:donate@nuzhnapomosh.ru">donate@nuzhnapomosh.ru</a></dd>
-        <dd class="contact_head">Вакансии</dd>
-        <dd class="contact_desc"><a href="mailto:job@nuzhnapomosh.ru">job@nuzhnapomosh.ru</a></dd>
-    </dl>
+    <div class="general_contacts">
+        <div class="general_contacts_addresses">
+            <dl class="general_contacts_list">
+                <dt class="contact_head">Адрес БФ «Нужна помощь»</dt>
+                <dd class="contact_desc">г. Москва, ул. Правды, д. 8, корп. 13, 7 этаж, помещение ХХIV, ком. 2</dd>
+                <dt class="contact_head">Адрес для корреспонденции</dt>
+                <dd class="contact_desc">125009, г. Москва, а/я 366 БФ «Нужна помощь»</dd>
+                <dt class="contact_head">Телефон</dt>
+                <dd class="contact_desc">+7 495 641 02 86</dd>
+                <dt class="contact_head">Мессенджеры</dt>
+                <dd class="contact_desc">
+                    <a href="https://telegram.me/nzhnpmsh" target="_blank">Telegram</a> / 
+                    <a href="https://invite.viber.com/?g2=AQALtEtvvcnJ5lESBi4Ay7uPtf7J1f2ODEkQLiy76uomVq5Ml4jwuTUb9smHEKjg&lang=ru" target="_blank">Viber</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="general_contacts_emails">
+            <dl>
+                <dt class="contact_head">Служба поддержки</dt>
+                <dd class="contact_desc"><a href="mailto:mne@nuzhnapomosh.ru">mne@nuzhnapomosh.ru</a></dd>
+                <dt class="contact_head">По вопросам верификации фондов</dt>
+                <dd class="contact_desc"><a href="mailto:nko@nuzhnapomosh.ru">nko@nuzhnapomosh.ru</a></dd>
+                <dt class="contact_head">По вопросам привлечения средств</dt>
+                <dd class="contact_desc"><a href="mailto:donate@nuzhnapomosh.ru">donate@nuzhnapomosh.ru</a></dd>
+                <dd class="contact_head">Вакансии</dd>
+                <dd class="contact_desc"><a href="mailto:job@nuzhnapomosh.ru">job@nuzhnapomosh.ru</a></dd>
+            </dl>
+        </div>
+    </div>
     <a href="http://nuzhnapomoshemployer.tilda.ws/" target="_blank"><img class="banner-pic" src="/assets/banner_wide.png"></a>
     <h2 class="header_2">Сотрудники фонда</h2>
     <button class="wrap_button">Раскрыть все</button>
@@ -139,57 +189,7 @@
     </ul>
     </main>
 
-    <script src="script2.js"></script> 
-    
-    <script>
-var containers;
-function initDrawers() {
-    // Получаем контейнер с контентом
-    containers = document.querySelectorAll(".js-np-accordion");
-    setHeights();
-    wireUpTriggers();
-    window.addEventListener("resize", setHeights);
-}
-
-window.addEventListener("load", initDrawers);
-
-function setHeights() {
-    containers.forEach(container => {
-        // Получаем контент
-        let content = container.querySelector(".js-np-accordion__content");
-        content.removeAttribute("aria-hidden");
-        // Высота контента, который нужно скрыть/показать
-        let heightOfContent = content.getBoundingClientRect().height;
-        // Задаем пользовательские свойства CSS с высотой контента
-        container.style.setProperty("--containerHeight", `${heightOfContent}px`);
-        // Когда высота считана и задана
-        setTimeout(e => {
-            container.classList.add("height-is-set");
-            content.setAttribute("aria-hidden", "true");
-        }, 0);
-    });
-}
-
-function wireUpTriggers() {
-    containers.forEach(container => {
-        // Получаем все элементы-триггеры
-        let btn = container.querySelector(".js-np-accordion__button");
-        // Получаем контент
-        let content = container.querySelector(".js-np-accordion__content");
-        btn.addEventListener("click", () => {
-            btn.setAttribute("aria-expanded", btn.getAttribute("aria-expanded") === "false" ? "true" : "false");
-            container.setAttribute(
-                "data-drawer-showing",
-                container.getAttribute("data-drawer-showing") === "true" ? "false" : "true"
-            );
-            content.setAttribute(
-                "aria-hidden",
-                content.getAttribute("aria-hidden") === "true" ? "false" : "true"
-            );
-        });
-    });
-}
-        </script>
+    <script src="/script.js"></script> 
 </body>
 </html>
 
