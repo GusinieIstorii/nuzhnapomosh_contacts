@@ -37,7 +37,7 @@ function wireUpTriggers() {
         let img = container.querySelector('.accordion-image');
         btn.addEventListener("click", () => {
             btn.setAttribute("aria-expanded", btn.getAttribute("aria-expanded") === "false" ? "true" : "false");
-            img.setAttribute('src', img.getAttribute("src") === "/assets/plus.svg" ? "/assets/minus.svg" : "/assets/plus.svg")
+            img.setAttribute('src', img.getAttribute("src") === "./assets/plus.svg" ? "./assets/minus.svg" : "./assets/plus.svg")
             container.setAttribute(
                 "data-drawer-showing",
                 container.getAttribute("data-drawer-showing") === "true" ? "false" : "true"
