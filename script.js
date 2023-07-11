@@ -34,8 +34,10 @@ function wireUpTriggers() {
         let btn = container.querySelector(".js-np-accordion__button");
         // Получаем контент
         let content = container.querySelector(".js-np-accordion__content");
+        let img = container.querySelector('.accordion-image');
         btn.addEventListener("click", () => {
             btn.setAttribute("aria-expanded", btn.getAttribute("aria-expanded") === "false" ? "true" : "false");
+            img.setAttribute('src', img.getAttribute("src") === "/assets/plus.svg" ? "/assets/minus.svg" : "/assets/plus.svg")
             container.setAttribute(
                 "data-drawer-showing",
                 container.getAttribute("data-drawer-showing") === "true" ? "false" : "true"
@@ -90,8 +92,6 @@ elementForm.addEventListener('submit', (e) => {
   // наверное полученные данные как-то должны все таки отправиться
   modal.classList.toggle("show-modal");
   modalSubmitted.classList.toggle("show-modal");
-
-  console.log('happened');
 });
 
 const closeButtonSubmittedModal = document.querySelector('.close-button.submitted')
