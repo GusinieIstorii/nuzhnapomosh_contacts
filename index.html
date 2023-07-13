@@ -6,84 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нужна помощь</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+    <link rel=“preconnect” href=“https://design.nuzhnapomosh.ru/” />
+    <link href=“https://design.nuzhnapomosh.ru/fonts/fonts-futura-leksa-romanovsky.css” rel=“stylesheet” />
+    <link rel=“preload” as=“font” type=“font/woff2” href=“https://design.nuzhnapomosh.ru/fonts/futura/book/futurabook.woff2” crossorigin />
+    <link rel=“preload” as=“font” type=“font/woff2” href=“https://design.nuzhnapomosh.ru/fonts/futura/demi/futurademi.woff2” crossorigin /> 
 </head>
 <body>
     <main>
-    <div class="description">
-        <h1 class="header_1">Контакты</h1>
-        <p class="p_headline">Фонд «Нужна помощь» — это команда единомышленников, объединенная общими ценностями. Мы верим в системные решения социальных проблем и знаем, как на это влияют качество и результаты нашей работы.</p>
-        <button class="contact_button button">Напишите нам</button>
-        <div class="modal modal-form">
-            <div class="modal-content">
-                <div class="modal_content_header">
+    <div class="contact-description">
+        <h1 class="contact-header">Контакты</h1>
+        <p class="contact-headline">Фонд «Нужна помощь» — это команда единомышленников, объединенная общими ценностями. Мы верим в системные решения социальных проблем и знаем, как на это влияют качество и результаты нашей работы.</p>
+        <button class="contact-button">Напишите нам</button>
+        <div class="contact-modal">
+            <div class="contact-form-container">
+                <div class="contact-form-container-header">
                  <button class="close-button"><img src="./assets/cross.svg" alt="Кнопка закрыть"></button>
-                 <h3>Написать в фонд</h3>
+                 <p class="contact-form-container__heading">Написать в фонд</p>
                 </div>
-                <form id="contact_form">
-                    <fieldset id="name_fieldset">
-                        <legend>Имя</legend>
-                        <label id="name-label" for="name"><input id="name" type="text" required oninvalid="this.setCustomValidity('Укажите имя')"
-                            oninput="setCustomValidity('')"></label>
-                    </fieldset>
-                    <fieldset id="email_fieldset">
-                        <legend>Email</legend>
-                        <label id="email-label" for="email"><input id="email" type="email" required oninvalid="this.setCustomValidity('Укажите корректный email')"
-                            oninput="setCustomValidity('')"></label>
-                    </fieldset>
-                    <fieldset id="question_fieldset">
-                        <legend>Ваш вопрос</legend>
-                        <label id="question-label" for="question"><textarea id="question" rows="3" required oninvalid="this.setCustomValidity('Укажите ваш вопрос')"
-                            oninput="setCustomValidity('')"></textarea></label>
-                    </fieldset>
-                    <fieldset id="personal_info_fieldset">
-                        <label for="personal_data"><input id="personal_data" type="checkbox" name="personal_data" value="personal_data" checked required>Соглашаюсь на обработку персональных данных</label>
-                    </fieldset>
-                    <button class="send-button button" type="submit">ОТПРАВИТЬ</button>
+                <form id="contact-form">
+                     <div class="contact-form__name-group"> 
+                        <label for="name">Имя</label>
+                        <input id="name" type="text" required oninvalid="this.setCustomValidity('Укажите имя')" oninput="setCustomValidity('')">
+                     </div>
+                     <div class="contact-form__email-group">
+                     <label for="email">Email</label>
+                     <input id="email" type="email" required oninvalid="this.setCustomValidity('Укажите корректный email')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="contact-form__question-group">
+                        <label for="question">Ваш вопрос</label>
+                        <textarea id="question" rows="3" required oninvalid="this.setCustomValidity('Укажите ваш вопрос')" oninput="setCustomValidity('')"></textarea>
+                    </div>
+                     <div class="contact-form__personal-data-group">
+                        <input id="personal-data" type="checkbox" name="personal-data" value="personal-data" checked required>
+                        <label for="personal-data">Соглашаюсь на обработку персональных данных</label>
+                     </div>
+                     <button class="contact-button contact-form__send-button" type="submit">Отправить</button>                    
                 </form>
             </div>
         </div> 
-        <div class="modal modal-submitted">
-            <div class="modal-content ">
-                <div class="modal_content_header">
-                 <button class="close-button submitted"><img src="./assets/cross.svg" alt="Кнопка закрыть"></button>
-                 <h3>Напишите нам</h3>
+        <div class="contact-modal contact-modal_form-submitted">
+            <div class="contact-form-container">
+                <div class="contact-form-container-header">
+                 <button class="close-button close-button_form-submitted"><img src="./assets/cross.svg" alt="Кнопка закрыть"></button>
+                 <p class="contact-form-container__heading">Напишите нам</p>
                 </div>
-                <div class="modal-submitted-content">
-                    <h3 class="h3-message-sent">Сообщение отправлено</h3>
+                <div class="contact-form-container__content">
+                    <p class="contact-form-container__heading contact-form-container__heading_mb2">Сообщение отправлено</p>
                     <p>Мы свяжемся с вами в течение трех дней</p>
                 </div>
             </div>
         </div> 
     </div>
-    <div class="general_contacts">
-        <div class="general_contacts_addresses">
-            <dl class="general_contacts_list">
-                <dt class="contact_head">Адрес БФ «Нужна помощь»</dt>
-                <dd class="contact_desc">г. Москва, ул. Правды, д. 8, корп. 13, 7 этаж, помещение ХХIV, ком. 2</dd>
-                <dt class="contact_head">Адрес для корреспонденции</dt>
-                <dd class="contact_desc">125009, г. Москва, а/я 366 БФ «Нужна помощь»</dd>
-                <dt class="contact_head">Телефон</dt>
-                <dd class="contact_desc"><a href=”tel:+7(495)6410286”>+7 495 641 02 86</a></dd>
-                <dt class="contact_head">Мессенджеры</dt>
-                <dd class="contact_desc">
+    <div class="general-contacts">
+            <dl class="general-contacts-list">
+                <dt class="general-contacts-list__head">Адрес БФ «Нужна помощь»</dt>
+                <dd class="general-contacts-list__desc">г. Москва, ул. Правды, д. 8, корп. 13, 7 этаж, помещение ХХIV, ком. 2</dd>
+                <dt class="general-contacts-list__head">Адрес для корреспонденции</dt>
+                <dd class="general-contacts-list__desc">125009, г. Москва, а/я 366 БФ «Нужна помощь»</dd>
+                <dt class="general-contacts-list__head">Телефон</dt>
+                <dd class="general-contacts-list__desc"><a href=”tel:+7(495)6410286”>+7 495 641 02 86</a></dd>
+                <dt class="general-contacts-list__head">Мессенджеры</dt>
+                <dd class="general-contacts-list__desc">
                     <a href="https://telegram.me/nzhnpmsh" target="_blank">Telegram</a> / 
                     <a href="https://invite.viber.com/?g2=AQALtEtvvcnJ5lESBi4Ay7uPtf7J1f2ODEkQLiy76uomVq5Ml4jwuTUb9smHEKjg&lang=ru" target="_blank">Viber</a>
                 </dd>
             </dl>
-        </div>
-        <div class="general_contacts_emails">
-            <dl>
-                <dt class="contact_head">Служба поддержки</dt>
-                <dd class="contact_desc"><a href="mailto:mne@nuzhnapomosh.ru">mne@nuzhnapomosh.ru</a></dd>
-                <dt class="contact_head">По вопросам верификации фондов</dt>
-                <dd class="contact_desc"><a href="mailto:nko@nuzhnapomosh.ru">nko@nuzhnapomosh.ru</a></dd>
-                <dt class="contact_head">По вопросам привлечения средств</dt>
-                <dd class="contact_desc"><a href="mailto:donate@nuzhnapomosh.ru">donate@nuzhnapomosh.ru</a></dd>
-                <dd class="contact_head">Вакансии</dd>
-                <dd class="contact_desc"><a href="mailto:job@nuzhnapomosh.ru">job@nuzhnapomosh.ru</a></dd>
+            <dl class="general-contacts-list">
+                <dt class="general-contacts-list__head">Служба поддержки</dt>
+                <dd class="general-contacts-list__desc"><a href="mailto:mne@nuzhnapomosh.ru">mne@nuzhnapomosh.ru</a></dd>
+                <dt class="general-contacts-list__head">По вопросам верификации фондов</dt>
+                <dd class="general-contacts-list__desc"><a href="mailto:nko@nuzhnapomosh.ru">nko@nuzhnapomosh.ru</a></dd>
+                <dt class="general-contacts-list__head">По вопросам привлечения средств</dt>
+                <dd class="general-contacts-list__desc"><a href="mailto:donate@nuzhnapomosh.ru">donate@nuzhnapomosh.ru</a></dd>
+                <dd class="general-contacts-list__head">Вакансии</dd>
+                <dd class="general-contacts-list__desc"><a href="mailto:job@nuzhnapomosh.ru">job@nuzhnapomosh.ru</a></dd>
             </dl>
-        </div>
     </div>
     <a href="http://nuzhnapomoshemployer.tilda.ws/" target="_blank">
         <picture>
@@ -93,17 +90,17 @@
           </picture>
     </a>
     <div class="accordion-list-header">
-        <h2 class="header_2">Сотрудники фонда</h2>
-        <button class="wrap_button">Раскрыть все</button>
+        <h2 class="heading-2">Сотрудники фонда</h2>
+        <button class="accordion-list__wrap-button">Раскрыть все</button>
     </div>
     <!--сделать логику кнопки-->
     <ul class="employees_list">
-        <li class="depatment np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Управление"
+        <li class="np-accordion__item js-np-accordion">
+            <div class="np-accordion-header">
+                <button class="js-np-accordion__button np-accordion__button " aria-expanded="true" title="Свернуть">
+                    Управление
                 </button>
-                <img class='accordion-image' src="./assets/plus.svg">
+                <img class='js-np-accordion__button accordion-image' src="./assets/plus.svg">
             </div>
             <div class="np-accordion__content js-np-accordion__content">
                 <div class="np-accordion-row">
@@ -118,12 +115,12 @@
                 </div>      
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
+        <li class="np-accordion__item js-np-accordion">
+            <div class="np-accordion-header">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Отдел исследований"
+                    Отдел исследований
                 </button>
-                <img class='accordion-image' src="./assets/plus.svg">
+                <img class='accordion-image js-np-accordion__button' src="./assets/plus.svg">
             </div>
             <div class="np-accordion__content js-np-accordion__content">
                 <div class="np-accordion-row">
@@ -133,12 +130,12 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
+        <li class="np-accordion__item js-np-accordion">
+            <div class="np-accordion-header">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Финансово-административная дирекция"
+                    Финансово-административная дирекция
                 </button>
-                <img class='accordion-image' src="./assets/plus.svg">
+                <img class='accordion-image js-np-accordion__button' src="./assets/plus.svg">
             </div>
             <div class="np-accordion__content js-np-accordion__content">
                 <div class="np-accordion-row">
@@ -148,10 +145,10 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
+        <li class="np-accordion__item js-np-accordion">
+            <div class="np-accordion-header">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Программная дирекция"
+                    Программная дирекция
                 </button>
                 <img class='accordion-image' src="./assets/plus.svg">
             </div>
@@ -193,10 +190,10 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
+        <li class="np-accordion__item js-np-accordion">
             <div class="np-accordion-header js-np-accordion__button">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Дирекция по привлечению средств"
+                    Дирекция по привлечению средств
                 </button>
                 <img class='accordion-image' src="./assets/plus.svg">
             </div>
@@ -228,10 +225,10 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
+        <li class="np-accordion__item js-np-accordion">
             <div class="np-accordion-header js-np-accordion__button">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Дирекция по внешним коммуникациям"
+                    Дирекция по внешним коммуникациям
                 </button>
                 <img class='accordion-image' src="./assets/plus.svg">
             </div>
@@ -263,10 +260,10 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
+        <li class="np-accordion__item js-np-accordion">
             <div class="np-accordion-header js-np-accordion__button">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Дирекция HR"
+                    Дирекция HR
                 </button>
                 <img class='accordion-image' src="./assets/plus.svg">
             </div>
@@ -278,10 +275,10 @@
                 </div>
             </div>
         </li>
-        <li class="depatment np-accordion__item js-np-accordion">
+        <li class="np-accordion__item js-np-accordion">
             <div class="np-accordion-header js-np-accordion__button">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    "Дирекция разработки"
+                    Дирекция разработки
                 </button>
                 <img class='accordion-image' src="./assets/plus.svg">
             </div>

@@ -1,8 +1,25 @@
+@font-face {
+    font-family: 'FuturaBook';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://design.nuzhnapomosh.ru/fonts/futura/book/futurabook.woff2') format('woff2'), url('https://design.nuzhnapomosh.ru/fonts/futura/book/futurabook.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'FuturaDemi';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://design.nuzhnapomosh.ru/fonts/futura/demi/futurademi.woff2') format('woff2'), url('https://design.nuzhnapomosh.ru/fonts/futura/demi/futurademi.woff') format('woff');
+  }
+
 * {
 	padding: 0px;
 	margin: 0px;
 	border: none;
-    font-family: 'Futura PT', Arial,Helvetica, sans-serif;
+    /* font-family: 'Futura PT', Arial,Helvetica, sans-serif; */
+    font-family: 'FuturaBook', Arial, Helvetica, sans-serif;
     font-size: 10px;
 }
 
@@ -32,22 +49,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
     font-size: 5rem;
-    font-weight: 500;
+    font-family: 'FuturaDemi';
 }
 
 h2 {
     font-size: 3.5rem;
-    font-weight: 500;
+    font-family: 'FuturaDemi';
 }
 
-h3 {
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-p, .wrap_button {
+p {
     font-size: 2rem;
-    font-weight: 100;
 }
 
 ul, ul li {
@@ -73,15 +84,7 @@ button, input[type="submit"] {
     background-color: transparent;
     background: none;
     cursor: pointer;
-    
-}
-
-label {
-	cursor: pointer;
-}
-
-legend {
-	display: block;
+    font-family: 'FuturaDemi';
 }
 
 body {
@@ -94,20 +97,20 @@ main{
     margin: 8rem auto;
 }
 
-.description {
+.contact-description {
     max-width: 76rem;
     margin-bottom: 8rem;
 }
 
-.header_1 {
+.contact-header {
     margin-bottom: 2rem;
 }
 
-.p_headline {
+.contact-headline {
     font-size: 2.5rem;
 }
 
-.button {
+.contact-button {
     display: block;
     width: 26rem;
     height: 5rem;
@@ -118,7 +121,6 @@ main{
     color: var(--white-ffffff, #FFF);
     text-align: center;
     font-size: 1.4rem;
-    font-weight: 500;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     margin-top: 4rem;
@@ -126,7 +128,7 @@ main{
 
 /* FORM */
 
-.modal {
+.contact-modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -137,14 +139,20 @@ main{
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  overflow: scroll;
 }
-.modal-content {
+.contact-form-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  width: 66%;
+  width: 84rem;
+}
+
+.contact-form-container__heading {
+    font-size: 3rem;
+    font-family: 'FuturaDemi';
 }
 
 .close-button {
@@ -165,12 +173,12 @@ main{
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal_content_header {
+.contact-form-container-header {
     padding: 4rem;
     border-bottom: #E6E6E6 0.1rem solid;
 }
 
-#contact_form {
+#contact-form {
   padding: 4rem;
   width: 100%;
   display: flex;
@@ -179,32 +187,41 @@ main{
   justify-content: space-between;
 }
 
-#name_fieldset, #email_fieldset {
-    width: 48%;
-    min-width: 29rem;
-}
-
-legend, label {
+label {
+    cursor: pointer;
+    font-family: 'FuturaDemi';
     font-size: 2rem;
     margin-bottom: 1rem;
+    color:#302F2D;
 }
 
-legend::after {
+label[for=name]::after,[for=email]::after,[for=question]::after {
     content: '*';
     color: #E65639;
 }
 
+label[for=personal-data] {
+    display: contents;
+    font-family: 'FuturaBook';
+}
+
+.contact-form__name-group, .contact-form__email-group {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+}
+
 input[type=text],[type=email] {
+    width: 100%;
     border: 0.02rem solid #DCDAD8;
     background-color: #FAFAFA;
     height: 6rem;
     padding: 0 2rem;
-    margin: 0 2rem 4rem 0;
-    width: 100%;
+    margin-bottom: 4rem;
     font-size: 2rem;
-  }
+}
 
-#question_fieldset, #personal_info_fieldset {
+.contact-form__question-group, .contact-form__personal-data-group {
   display: block;
   width: 100%;
 }
@@ -228,11 +245,11 @@ input[type=checkbox] {
     border-radius: 0;
 }
 
-.send-button {
+.contact-form__send-button {
   width: 100%;
 }
 
-.modal-submitted-content {
+.contact-form-container__content {
     margin: auto;
     height: 54rem;
     display: flex;
@@ -242,12 +259,12 @@ input[type=checkbox] {
     justify-content: center;
 }
 
-.h3-message-sent {
+.contact-form-container__heading_mb2 {
     margin-bottom: 2rem;
 }
 /* end of form */
 
-.general_contacts {
+.general-contacts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -256,19 +273,18 @@ input[type=checkbox] {
     color: #302F2D;
 }
 
-.contact_head {
+.general-contacts-list__head {
     font-size: 2rem;
-    font-weight: 500;
+    font-family: 'FuturaDemi';
     margin-bottom: 0.5rem;
 }
 
-.contact_desc {
+.general-contacts-list__desc {
     font-size: 2rem;
-    font-weight: 200;
     margin-bottom: 4rem;
 }
 
-.contact_desc:last-of-type {
+.general-contacts-list__desc:last-of-type {
     margin-bottom: 0;
 } 
 
@@ -288,6 +304,12 @@ input[type=checkbox] {
     
 }
 
+.accordion-list__wrap-button {
+    font-size: 2rem;
+    font-family: 'FuturaBook';
+    color: #302F2D;
+}
+
 .np-accordion-header {
     display: flex;
     flex-direction: row;
@@ -301,9 +323,8 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
-.js-np-accordion__button{
+.np-accordion__button{
     font-size: 2rem;
-    font-weight: 500;
     color: #302F2D;
     text-align: left;
 }
@@ -315,6 +336,7 @@ input[type=checkbox] {
 
 .js-np-accordion__content[aria-hidden="true"] {
     max-height: 0;
+    display: none;
 }
 
 .js-np-accordion__content[aria-hidden="false"] {
@@ -357,11 +379,11 @@ input[type=checkbox] {
     main{
         margin: 8rem 5rem;
     } 
-    #contact_form {
-        flex-direction: column;
-    }
-    #name_fieldset, #email_fieldset {
-        width: 100%;
+    .contact-form-container {
+        width: 69rem;
+      }
+    .contact-form__name-group, .contact-form__email-group {
+        width: 29rem;
     }
 }
 
@@ -369,6 +391,12 @@ input[type=checkbox] {
     main{
         margin: 8rem 3.5rem;
     } 
+    .contact-form-container {
+        width: 54rem;
+      }
+    .contact-form__name-group, .contact-form__email-group {
+        width: 100%;
+    }
     .text-accordion-row {
         width: 50%;
     }
@@ -382,16 +410,22 @@ input[type=checkbox] {
     main{
         margin: 6rem 3rem;
     } 
-    .description {
+    .contact-description {
         margin-bottom: 6rem;
     }
-    .general_contacts {
+    .contact-form-container {
+        width: 100vw;
+        position: initial;
+        transform: none;
+        margin: 1rem 0;
+      }
+    .general-contacts {
         margin-bottom: 6rem;
     }
-    .contact_desc {
+    .general-contacts-list__desc {
         margin-bottom: 3rem;
     }
-    .contact_desc:last-of-type {
+    .general-contacts-list__desc:last-of-type {
         margin-bottom: 0;
     } 
     .banner-pic {
@@ -400,22 +434,18 @@ input[type=checkbox] {
     
 }
 
-@media (max-width: 505px) {
+@media (max-width: 320px) {
     main{
         margin: 6rem 2rem;
     } 
     h1 {
         font-size: 3.5rem;
     }
-    .p_headline {
+    .contact-headline {
         font-size: 2rem;
     }
     .button {
         width: 28rem;
-    }
-    .modal-content {
-        width: 100%;
-        height: 100%;
     }
     h2 {
         font-size: 3rem;
@@ -425,11 +455,12 @@ input[type=checkbox] {
         flex-direction: column;
         align-items: flex-start
     }
-    .header_2 {
+    .heading-2 {
         margin-bottom: 4rem;
     }
     
     .employee-name {
         margin-bottom: 2rem;
+        width: 100%;
     }
 }

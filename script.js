@@ -52,17 +52,23 @@ function wireUpTriggers() {
 
 // modal - form open
 
-var modal = document.querySelector(".modal-form");
-var trigger = document.querySelector(".contact_button");
+var modal = document.querySelector(".contact-modal");
+var trigger = document.querySelector(".contact-button");
 var closeButton = document.querySelector(".close-button");
 
-function toggleModal() {
+function toggleModal(event) {
     modal.classList.toggle("show-modal");
+    if (modal.classList.contains('show-modal')) {
+        scrollController.disabledScroll();
+    } else {
+        scrollController.enabledScroll();
+    }
 }
 
 function windowOnClick(event) {
     if (event.target === modal) {
         toggleModal();
+        scrollController.enabledScroll();
     }
 }
 
@@ -83,8 +89,9 @@ email.addEventListener("input", (e) => {
 
 // modal - form submitted
 
-const elementForm = document.querySelector('#contact_form');
-const modalSubmitted = document.querySelector('.modal-submitted');
+const elementForm = document.querySelector('#contact-form');
+const modalSubmitted = document.querySelector('.contact-modal_form-submitted');
+
 
 elementForm.addEventListener('submit', (e) => {
   e.preventDefault(); // Остановить форму от посылки на сервер
@@ -94,9 +101,31 @@ elementForm.addEventListener('submit', (e) => {
   modalSubmitted.classList.toggle("show-modal");
 });
 
-const closeButtonSubmittedModal = document.querySelector('.close-button.submitted')
+const closeButtonSubmittedModal = document.querySelector('.close-button_form-submitted')
 
 closeButtonSubmittedModal.addEventListener('click', (e) => {
     modalSubmitted.classList.toggle("show-modal");
+    scrollController.enabledScroll();
 })
+
+// SCROLL CONTROLLER
+const scrollController = {
+    scrollPosition: 0,
+    disabledScroll() {
+        scrollController.scrollPosition = window.scrollY;
+        document.body.style.cssText = `
+            overflow: hidden;
+            position: fixed;
+            top: -${scrollController.scrollPosition}px;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+        `;
+    },
+    enabledScroll() {
+        document.body.style.cssText = '';
+        window.scroll({top: scrollController.scrollPosition});
+    },
+}
 
