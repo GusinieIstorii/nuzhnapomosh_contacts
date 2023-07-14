@@ -93,22 +93,19 @@
         <h2 class="heading-2">Сотрудники фонда</h2>
         <button class="accordion-list__wrap-button">Раскрыть все</button>
     </div>
-    <!--сделать логику кнопки-->
-    <ul class="employees_list">
+    <ul class="employees-list">
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header">
-                <button class="js-np-accordion__button np-accordion__button " aria-expanded="true" title="Свернуть">
-                    Управление
+                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                    <h3>Управление</h3>
+                    <img class='accordion-image' src="./assets/plus.svg">
                 </button>
-                <img class='js-np-accordion__button accordion-image' src="./assets/plus.svg">
-            </div>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Директор</p>
                     <p class="text-accordion-row employee-name">Софья Жукова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:zhukova@nuzhnapomosh.ru">zhukova@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Персональный ассистент директора</p>
                     <p class="text-accordion-row employee-name">Александра Бескедевич</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:zhukova@nuzhnapomosh.ru">a.beskedevich@nuzhnapomosh.ru</a></p>
@@ -116,14 +113,12 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header">
                 <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Отдел исследований
+                    <h3>Отдел исследований</h3>
+                    <img class='accordion-image' src="./assets/plus.svg">
                 </button>
-                <img class='accordion-image js-np-accordion__button' src="./assets/plus.svg">
-            </div>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Социолог-исследователь</p>
                     <p class="text-accordion-row employee-name">Карина Пипия</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:k.pipiia@nuzhnapomosh.ru">k.pipiia@nuzhnapomosh.ru</a></p>
@@ -131,14 +126,12 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Финансово-административная дирекция
-                </button>
-                <img class='accordion-image js-np-accordion__button' src="./assets/plus.svg">
-            </div>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Финансово-административная дирекция</h3>
+                <img class='accordion-image' src="./assets/plus.svg">
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Финансовый директор</p>
                     <p class="text-accordion-row employee-name">Алина Скуридина</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:a.skuridina@nuzhnapomosh.ru">a.skuridina@nuzhnapomosh.ru</a></p>
@@ -146,44 +139,42 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Программная дирекция
-                </button>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Программная дирекция</h3>
                 <img class='accordion-image' src="./assets/plus.svg">
-            </div>
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Программный директор</p>
                     <p class="text-accordion-row employee-name">Ольга Рончинская</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:o.ronchinskaya@nuzhnapomosh.ru">o.ronchinskaya@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Менеджер процессов направления по развитию НКО</p>
                     <p class="text-accordion-row employee-name">Дарья Веселкина</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:d.veselkina@nuzhnapomosh.ru">d.veselkina@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Менеджер по развитию НКО</p>
                     <p class="text-accordion-row employee-name">Екатерина Завершинская</p>
                     <p class="text-accordion-row"><a href="mailto:e.zaverchinskaia@nuzhnapomosh.ru">e.zaverchinskaia@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Руководительница IT продукта «Ядро»</p>
                     <p class="text-accordion-row employee-name">Екатерина Гурцак</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:e.gurtsak@nuzhnapomosh.ru">e.gurtsak@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Старшая методистка онлайн-школы «Опытным путем»</p>
                     <p class="text-accordion-row employee-name">Наталья Коган</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:n.kogan@nuzhnapomosh.ru">n.kogan@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Куратор студентов онлайн-школы</p>
                     <p class="text-accordion-row employee-name">Елена Агеева</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:e.ageeva@nuzhnapomosh.ru">e.ageeva@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Руководитель проекта «Если быть точным»</p>
                     <p class="text-accordion-row employee-name">Арнольд Хачатуров</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:a.khachaturov@nuzhnapomosh.ru">a.khachaturov@nuzhnapomosh.ru</a></p>
@@ -191,34 +182,32 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Дирекция по привлечению средств
-                </button>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Дирекция по привлечению средств</h3>
                 <img class='accordion-image' src="./assets/plus.svg">
-            </div>
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Директорка по привлечению средств</p>
                     <p class="text-accordion-row employee-name">Майя Соерова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:m.soerova@nuzhnapomosh.ru">m.soerova@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Руководительница направления по работе с частными донорами</p>
                     <p class="text-accordion-row employee-name">Алёна Удаленкова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:a.udalenkova@nuzhnapomosh.ru">a.udalenkova@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Менеджер по частному фандрайзингу</p>
                     <p class="text-accordion-row employee-name">Даниил Дедов</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:d.dedov@nuzhnapomosh.ru">d.dedov@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Менеджер по работе с бизнес-партнерами</p>
                     <p class="text-accordion-row employee-name">Ирина Святченкова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:i.svyatchenkova@nuzhnapomosh.ru">i.svyatchenkova@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Руководительница направления волонтерского фандрайзинга и «Пользуясь случаем»</p>
                     <p class="text-accordion-row employee-name">Екатерина Круглова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:e.kruglova@nuzhnapomosh.ru">e.kruglova@nuzhnapomosh.ru</a></p>
@@ -226,34 +215,32 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Дирекция по внешним коммуникациям
-                </button>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Дирекция по внешним коммуникациям</h3>
                 <img class='accordion-image' src="./assets/plus.svg">
-            </div>
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Директор по внешним коммуникациям</p>
                     <p class="text-accordion-row employee-name">Надежда Янкелевич</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:n.yankelevich@nuzhnapomosh.ru">n.yankelevich@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Старшая PR-менеджерка</p>
                     <p class="text-accordion-row employee-name">Наталья Никанова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:n.nikanova@nuzhnapomosh.ru">n.nikanova@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">SMM-редактор</p>
                     <p class="text-accordion-row employee-name">Юлия Биленко</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:y.bilenko@nuzhnapomosh.ru">y.bilenko@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Менеджерка по внешним коммуникациям</p>
                     <p class="text-accordion-row employee-name">Дарья Коленько</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:d.kolenko@nuzhnapomosh.ru">d.kolenko@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Главная редакторка медиа «Нужна помощь»</p>
                     <p class="text-accordion-row employee-name">Елизавета Тюрина</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:e.tyurina@nuzhnapomosh.ru">e.tyurina@nuzhnapomosh.ru</a></p>
@@ -261,14 +248,12 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Дирекция HR
-                </button>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Дирекция HR</h3>
                 <img class='accordion-image' src="./assets/plus.svg">
-            </div>
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">HRD</p>
                     <p class="text-accordion-row employee-name">Валерия Мазанова</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:v.mazanova@nuzhnapomosh.ru">v.mazanova@nuzhnapomosh.ru</a></p>
@@ -276,24 +261,22 @@
             </div>
         </li>
         <li class="np-accordion__item js-np-accordion">
-            <div class="np-accordion-header js-np-accordion__button">
-                <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
-                    Дирекция разработки
-                </button>
+            <button class="np-accordion__button js-np-accordion__button" aria-expanded="true" title="Свернуть">
+                <h3>Дирекция разработки</h3>
                 <img class='accordion-image' src="./assets/plus.svg">
-            </div>
+            </button>
             <div class="np-accordion__content js-np-accordion__content">
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Старшая руководительница проектов</p>
                     <p class="text-accordion-row employee-name">Анастасия Милютина</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:a.milutina@nuzhnapomosh.ru">a.milutina@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">CTO</p>
                     <p class="text-accordion-row employee-name">Павел Прокофьев</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:p.prokofyev_dev@nuzhnapomosh.ru">p.prokofyev_dev@nuzhnapomosh.ru</a></p>
                 </div>
-                <div class="np-accordion-row">
+                <div class="np-accordion__row">
                     <p class="text-accordion-row position">Старший UX/UI дизайнер</p>
                     <p class="text-accordion-row employee-name">Илья Кухарев</p>
                     <p class="text-accordion-row employee-contact"><a href="mailto:i.kuharev@nuzhnapomosh.ru">i.kuharev@nuzhnapomosh.ru</a></p>

@@ -57,6 +57,11 @@ h2 {
     font-family: 'FuturaDemi';
 }
 
+h3 {
+    font-size: 2rem;
+    font-family: 'FuturaDemi';
+}
+
 p {
     font-size: 2rem;
 }
@@ -315,23 +320,31 @@ input[type=checkbox] {
     color: #302F2D;
 }
 
-.np-accordion-header {
+/* .np-accordion-header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
-}
+} */
 
-.np-accordion-header:hover {
+/* .np-accordion-header:hover {
     cursor: pointer;
-}
+} */
 
 .np-accordion__button{
     font-size: 2rem;
     color: #302F2D;
     text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .js-np-accordion__content {
@@ -363,7 +376,7 @@ input[type=checkbox] {
     border-bottom: 0.01rem solid #302F2D;
 }
 
-.np-accordion-row {
+.np-accordion__row {
     border-bottom: 0.01rem solid #E6E6E6;
     display: flex;
     flex-direction: row;
