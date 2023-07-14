@@ -89,7 +89,6 @@ button, input[type="submit"] {
 
 body {
     background-color: #FAFAFA;
-    line-height: 3rem;
 }
 
 main{
@@ -103,11 +102,13 @@ main{
 }
 
 .contact-header {
+    line-height: 5rem;
     margin-bottom: 2rem;
 }
 
 .contact-headline {
     font-size: 2.5rem;
+    line-height: 120%;
 }
 
 .contact-button {
@@ -124,6 +125,10 @@ main{
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     margin-top: 4rem;
+}
+
+.contact-button:hover {
+    background: #d13924;
 }
 
 /* FORM */
@@ -418,7 +423,12 @@ input[type=checkbox] {
         position: initial;
         transform: none;
         margin: 1rem 0;
-      }
+    }
+    .contact-form-container__content {
+        padding: 9rem 2rem;
+        text-align: center;
+        height:fit-content;
+    }
     .general-contacts {
         margin-bottom: 6rem;
     }
@@ -444,7 +454,7 @@ input[type=checkbox] {
     .contact-headline {
         font-size: 2rem;
     }
-    .button {
+    .contact-button {
         width: 28rem;
     }
     h2 {
