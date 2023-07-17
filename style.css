@@ -461,7 +461,7 @@ input[type=checkbox] {
     .contact-description {
         margin-bottom: 6rem;
     }
-    .contact-form-container {
+    /* .contact-form-container {
         width: 100vw;
         position: initial;
         transform: none;
@@ -471,7 +471,7 @@ input[type=checkbox] {
         padding: 9rem 2rem;
         text-align: center;
         height:fit-content;
-    }
+    } */
     .general-contacts {
         margin-bottom: 6rem;
     }
@@ -509,6 +509,17 @@ input[type=checkbox] {
     }
     .contact-button {
         width: 28rem;
+    }
+    .contact-form-container {
+        width: 100vw;
+        position: initial;
+        transform: none;
+        margin: 1rem 0;
+    }
+    .contact-form-container__content {
+        padding: 9rem 2rem;
+        text-align: center;
+        height:fit-content;
     }
     h2 {
         font-size: 3rem;
