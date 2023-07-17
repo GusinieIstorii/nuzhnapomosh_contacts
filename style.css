@@ -19,7 +19,7 @@
 	margin: 0px;
 	border: none;
     /* font-family: 'Futura PT', Arial,Helvetica, sans-serif; */
-    font-family: 'FuturaBook', Arial, Helvetica, sans-serif;
+    font-family: 'FuturaBook', 'Futura PT', Arial, Helvetica, sans-serif;
     font-size: 10px;
 }
 
@@ -55,11 +55,13 @@ h1 {
 h2 {
     font-size: 3.5rem;
     font-family: 'FuturaDemi';
+    line-height: 100%;
 }
 
 h3 {
     font-size: 2rem;
     font-family: 'FuturaDemi';
+    line-height: 125%;
 }
 
 p {
@@ -277,21 +279,28 @@ input[type=checkbox] {
 .general-contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
-    margin-bottom: 8rem;
+    margin-bottom: 8.2rem;
     color: #302F2D;
+}
+
+.general-contacts-list-adresses {
+    width: 76rem;
+    margin-right: 4rem;
 }
 
 .general-contacts-list__head {
     font-size: 2rem;
     font-family: 'FuturaDemi';
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 125%;
 }
 
 .general-contacts-list__desc {
     font-size: 2rem;
     margin-bottom: 4rem;
+    line-height: 125%;
 }
 
 .general-contacts-list__desc:last-of-type {
@@ -310,7 +319,7 @@ input[type=checkbox] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6rem;
+    margin-bottom: 5.9rem;
     
 }
 
@@ -318,6 +327,7 @@ input[type=checkbox] {
     font-size: 2rem;
     font-family: 'FuturaBook';
     color: #302F2D;
+    padding-top: 1rem;
 }
 
 /* .np-accordion-header {
@@ -343,8 +353,8 @@ input[type=checkbox] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2.9rem;
+    padding-bottom: 2.9rem;
 }
 
 .js-np-accordion__content {
@@ -366,6 +376,11 @@ input[type=checkbox] {
     border-bottom: 0.01rem solid #E6E6E6;
 }
 
+
+/* .np-accordion__item:not(:first-child) {
+    border-top: none;
+  } */
+
 .np-accordion__item:hover {
     border-top: 0.01rem solid #302F2D;
     border-bottom: 0.01rem solid #302F2D;
@@ -385,15 +400,20 @@ input[type=checkbox] {
     padding: 3rem 0;
 }
 
+.np-accordion__content .np-accordion__row:first-child {
+    padding-top: 2rem;
+}
+
 .text-accordion-row {
-    width: 30%;
+    width: 31%;
+    line-height: 125%;
 }
 
 .position {
     color: #777;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1279px) {
     main{
         margin: 8rem 5rem;
     } 
@@ -403,9 +423,15 @@ input[type=checkbox] {
     .contact-form__name-group, .contact-form__email-group {
         width: 29rem;
     }
+    .general-contacts-list-adresses {
+        width: 56rem;
+    }
+    .general-contacts-list__desc {
+        padding-right: 2rem;
+    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1019px) {
     main{
         margin: 8rem 3.5rem;
     } 
@@ -414,6 +440,10 @@ input[type=checkbox] {
       }
     .contact-form__name-group, .contact-form__email-group {
         width: 100%;
+    }
+    .general-contacts-list-adresses {
+        width: 33rem;
+        margin-right: 3rem;
     }
     .text-accordion-row {
         width: 50%;
@@ -424,7 +454,7 @@ input[type=checkbox] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 759px) {
     main{
         margin: 6rem 3rem;
     } 
@@ -445,19 +475,29 @@ input[type=checkbox] {
     .general-contacts {
         margin-bottom: 6rem;
     }
-    .general-contacts-list__desc {
+    .general-contacts-list-adresses {
+        width: 100%;
+    }
+    .general-contacts-list__desc,
+    .general-contacts-list-adresses .general-contacts-list__desc:last-of-type {
         margin-bottom: 3rem;
     }
-    .general-contacts-list__desc:last-of-type {
-        margin-bottom: 0;
-    } 
     .banner-pic {
         margin-bottom: 6rem;
     }
-    
+    /* .text-accordion-row {
+        width: 100%;
+    } */
+    .position {
+        padding-right: 50vw;
+        margin-bottom: 1rem;
+    }
+    /* .employee-name {
+        margin-bottom: 2rem;
+    } */
 }
 
-@media (max-width: 320px) {
+@media (max-width: 599px) {
     main{
         margin: 6rem 2rem;
     } 
@@ -482,8 +522,6 @@ input[type=checkbox] {
         margin-bottom: 4rem;
     }
     
-    .employee-name {
-        margin-bottom: 2rem;
-        width: 100%;
-    }
+    
+
 }

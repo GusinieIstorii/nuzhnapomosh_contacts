@@ -45,15 +45,20 @@ function wireUpOpenAllButton() {
   const openAllBtn = document.querySelector('.accordion-list__wrap-button');
   const images = document.querySelectorAll('.accordion-image');
   const contents = document.querySelectorAll('.js-np-accordion__content');
+  const btns = document.querySelectorAll('.js-np-accordion__button');
 
   openAllBtn.addEventListener('click', () => {
     images.forEach((image) => image.setAttribute('src', openAllBtn.innerHTML === 'Раскрыть все' ? './assets/minus.svg' : './assets/plus.svg'));
     containers.forEach((container) => container.setAttribute(
       'data-drawer-showing',
-      openAllBtn.innerHTML === 'Раскрыть все' ? 'false' : 'true',
+      openAllBtn.innerHTML === 'Раскрыть все' ? 'true' : 'false',
     ));
     contents.forEach((content) => content.setAttribute(
       'aria-hidden',
+      openAllBtn.innerHTML === 'Раскрыть все' ? 'false' : 'true',
+    ));
+    btns.forEach((btn) => btn.setAttribute(
+      'aria-expanded',
       openAllBtn.innerHTML === 'Раскрыть все' ? 'false' : 'true',
     ));
     openAllBtn.innerHTML = openAllBtn.innerHTML === 'Раскрыть все' ? 'Скрыть все' : 'Раскрыть все';
