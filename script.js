@@ -48,20 +48,20 @@ function wireUpOpenAllButton() {
   const btns = document.querySelectorAll('.js-np-accordion__button');
 
   openAllBtn.addEventListener('click', () => {
-    images.forEach((image) => image.setAttribute('src', openAllBtn.innerHTML === 'Раскрыть все' ? './assets/minus.svg' : './assets/plus.svg'));
+    images.forEach((image) => image.setAttribute('src', openAllBtn.innerHTML === 'Раскрыть всё' ? './assets/minus.svg' : './assets/plus.svg'));
     containers.forEach((container) => container.setAttribute(
       'data-drawer-showing',
-      openAllBtn.innerHTML === 'Раскрыть все' ? 'true' : 'false',
+      openAllBtn.innerHTML === 'Раскрыть всё' ? 'true' : 'false',
     ));
     contents.forEach((content) => content.setAttribute(
       'aria-hidden',
-      openAllBtn.innerHTML === 'Раскрыть все' ? 'false' : 'true',
+      openAllBtn.innerHTML === 'Раскрыть всё' ? 'false' : 'true',
     ));
     btns.forEach((btn) => btn.setAttribute(
       'aria-expanded',
-      openAllBtn.innerHTML === 'Раскрыть все' ? 'false' : 'true',
+      openAllBtn.innerHTML === 'Раскрыть всё' ? 'false' : 'true',
     ));
-    openAllBtn.innerHTML = openAllBtn.innerHTML === 'Раскрыть все' ? 'Скрыть все' : 'Раскрыть все';
+    openAllBtn.innerHTML = openAllBtn.innerHTML === 'Раскрыть всё' ? 'Скрыть всё' : 'Раскрыть всё';
   });
 }
 
